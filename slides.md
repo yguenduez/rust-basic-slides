@@ -378,7 +378,7 @@ let json = serde_json::to_string(&dog);
 Try to solve the mistakes of the reckless developer:
 
 ```sh
-git clone git@github.com:rust-basel/traits.git
+git clone https://github.com/rust-basel/traits.git
 ```
 
 ---
@@ -569,7 +569,7 @@ A webserver offering `create`, `read`, `update`, `delete` endpoints for Pokémon
 ## How to proceed
 
 ```sh
-git clone git@github.com:rust-basel/axum-pokedex-starter.git
+git clone https://github.com/rust-basel/axum-pokedex-starter.git
 ```
 - You will find a postman test suite there, which tests your server
 - There exists a sample route already implemented
