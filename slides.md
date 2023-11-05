@@ -5,15 +5,10 @@ revealOptions:
   highlight-theme: 'github'
 ---
 
-Thanks to the sponsor
-
-![alt text](images/E+H_logo.svg "E+H")
-
----
 
 ## Agenda
 
-Lectures: (10:00-12:30)
+Lectures: (9:15-11:30)
 - Tooling
 - Functions & Structs
 - Branching & Looping
@@ -23,8 +18,10 @@ Lectures: (10:00-12:30)
 
 ----
 
-Workshop: (13:30-17:00)
-- Axum Pokedex
+Workshop: (12:30-17:00)
+- Small exercises - With knowledge from lecture
+- Advent of Code 2022 Day 1
+- Advent of Code 2022 Day 2
 
 ---
 
