@@ -512,3 +512,12 @@ fn parse(str: &str) -> Result<(), String> {
     Ok(())
 }
 ```
+
+---
+
+## Workshop
+
+- Part 1:   
+  `git clone https://github.com/rust-basel/basic-exercises.git`
+- Part 2: Advent-of-Code 2022 (Day 1 and Day 2)
+  `git clone https://github.com/yguenduez/elves-madness.git`
