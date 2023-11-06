@@ -450,17 +450,18 @@ let foo_readonly_ref = &foo;
 let foo_readonly_ref_2 = &foo;
 
 // or one mutable reference
-let mut bar_mut_ref = &bar;
+let bar_mutable_ref = &mut bar;
 
-// the borrow checker enforces this at compile time
-// The borrow checker also works with fat pointer (not covered here)
+{
+  let foo_mutable_ref = &mut foo; // <-- won't compile
+}
 ```
 
 ---
 ## Enums, matches & errors
 Enums
 ```rust
-// that's an ADT/sum type!
+// algebraic data type (ADT)
 enum TrafficLight {
   Green, Yellow, Red, // unit variants
   YellowBlinking(u32), // tuple variant
@@ -481,8 +482,8 @@ match traffic_light {
   Yellow => check_situation_and_decide(),
   Red => stop(),
   YellowBlinking(frequency) => check_situation_and_decide(),
-  OutOfService{description} =>  match description {
-    String::from("Alien Attack") => drive_like_hell(),
+  OutOfService{description} =>  match description.as_str() {
+    "Alien Attack" => drive_like_hell(),
     _ => check_situation_and_decide(),
   }
 }
@@ -508,6 +509,12 @@ Error Handling: The '?' operator:
 // syntactic sugar for match that propagates error types
 fn parse(str: &str) -> Result<(), String> {
     let num = _parse(str)?;
+
+    // let num = match _parse(str) {
+    //    Err(error) => return Err(error.to_string()),
+    //    Ok(parsed_value) => parsed_value
+    // };
+
     println!("{}", num);
     Ok(())
 }
