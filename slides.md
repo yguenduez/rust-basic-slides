@@ -233,10 +233,10 @@ impl Dog {
   pub fn new() -> Dog {
     Dog { is_happy: false }
   }
-  pub fn bark(&self) -> String {
+  pub fn bark(&self) -> String { // <- read only reference
     "Woof".to_string()
   }
-  pub fn set_happy(&mut self) {
+  pub fn set_happy(&mut self) { // <- mutable reference
     self.is_happy = true;
   }
 }
