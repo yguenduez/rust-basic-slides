@@ -269,7 +269,7 @@ match dog_is_happy {
 }
 
 let maybe_dog: Option<Dog> = Some(Dog);
-if let Some(dog) = maybe_there {
+if let Some(dog) = maybe_dog {
 }
 ```
 
